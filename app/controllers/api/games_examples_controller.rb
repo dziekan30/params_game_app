@@ -27,7 +27,7 @@ class Api::GamesExamplesController < ApplicationController
   def guess_query
     @guess = params[:guess].to_i
     hidden_number = 42
-    
+
     if @guess > hidden_number
       @message = "Woah, too high. Go Lower!"
     elsif @guess < hidden_number
@@ -38,4 +38,47 @@ class Api::GamesExamplesController < ApplicationController
 
     render 'guess_query.json.jb'
   end
+
+
+
+  def guess_number
+
+    @guess = params[:ex].to_i
+      hidden_number = 42
+      
+      if @guess > hidden_number
+        @message = "Woah, too high. Go Lower!"
+      elsif @guess < hidden_number
+        @message = "Come up a bit, guess higher next time."
+      else
+        @message = "... and that number was just right"
+      end
+
+      render 'guess_number.json.jb'
+
+  end
+
+def guess_number_1
+
+    @guess = params[:ex].to_i
+      hidden_number = 42
+      
+      if @guess > hidden_number
+        @message = "Woah, too high. Go Lower!"
+      elsif @guess < hidden_number
+        @message = "Come up a bit, guess higher next time."
+      else
+        @message = "... and that number was just right"
+      end
+
+      render 'guess_number_1_view.json.jb'
+
+  end
+
+
+
+def user_input
+
+end
+
 end

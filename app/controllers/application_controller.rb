@@ -1,13 +1,4 @@
 class ApplicationController < ActionController::Base
   
-  def game_one
-
-    
-
-
-    
-    render
-  end
-
-
+  protect_from_forgery with: :null_session
 end
